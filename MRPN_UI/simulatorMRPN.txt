@@ -1,0 +1,47 @@
+places: {p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, }
+transitions: {t4, t5, t1, t2, t3, }
+tokens: {
+  a in p8,
+  s in p4,
+  f in p8,
+  c in p9,
+  i in p8,
+}
+bonds : {
+  f - a,
+  f - i,
+  a - f,
+  a - i,
+  i - f,
+  i - a,
+}
+arcs : {
+  p1 -> t1 {[i] },
+  p2 -> t1 {[a] },
+  p3 -> t3 {[a, i, (null-null)] },
+  t1 -> p3 {[(null-null)] },
+  p3 -> t2 {[i, a, (null-null)] },
+  p4 -> t2 {[s] },
+  p5 -> t3 {[f] },
+  t2 -> p6 {[(null-null), (null-null)] },
+  t3 -> p7 {[(null-null), (null-null)] },
+  p7 -> t4 {[(null-null), (null-null), i, a, f] },
+  t4 -> p8 {[(null-null), (null-null), (null-null)] },
+  p8 -> t5 {[(null-null), a, i, (null-null), f, (null-null)] },
+  p9 -> t5 {[c] },
+  t5 -> p10 {[null, null, (null-null)] },
+  t4 -> p8 {[(null-null), (null-null), (null-null)] },
+  p7 -> t4 {[(null-null), (null-null), i, a, f] },
+  p9 -> t5 {[c] },
+  t5 -> p10 {[null, null, (null-null)] },
+  p8 -> t5 {[(null-null), a, i, (null-null), f, (null-null)] },
+  t1 -> p3 {[(null-null)] },
+  p1 -> t1 {[i] },
+  p2 -> t1 {[a] },
+  t2 -> p6 {[(null-null), (null-null)] },
+  p4 -> t2 {[s] },
+  p3 -> t2 {[i, a, (null-null)] },
+  p5 -> t3 {[f] },
+  p3 -> t3 {[a, i, (null-null)] },
+  t3 -> p7 {[(null-null), (null-null)] },
+}
